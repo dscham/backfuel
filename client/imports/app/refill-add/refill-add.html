@@ -1,0 +1,9 @@
+<a routerLink="/refillList">List</a>
+<fieldset>
+  <legend>Add Refill</legend>
+  <label for="content">
+    Content
+  </label>
+  <input id="content" [(ngModel)]="content">
+  <button (click)="addRefill()">Add</button>
+</fieldset>
