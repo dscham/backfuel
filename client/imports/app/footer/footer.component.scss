@@ -1,0 +1,27 @@
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+
+  margin: 0;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+
+  box-shadow: 0 -2px 3px 0px rgba(0, 0, 0, 0.75);
+
+  text-align: center;
+
+  .nav-item {
+    flex-grow: 1;
+
+    .icon {
+      font-size: 4em;
+    }
+
+    .caption {
+      font-size: 1.5em;
+    }
+  }
+}

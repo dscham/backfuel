@@ -10,6 +10,8 @@ import {AppComponent} from './app.component';
 import {RefillAddComponent} from './refill-add/refill-add.component';
 import {RefillListComponent} from './refill-list/refill-list.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {HeaderComponent} from "./header/header.component";
+import {FooterComponent} from "./footer/footer.component";
 
 @NgModule({
   imports: [
@@ -17,17 +19,17 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
     FormsModule,
     RouterModule.forRoot([
       {
-        path: 'refillList',
+        path: 'refills',
         component: RefillListComponent
       },
       {
-        path: 'refillAdd',
+        path: 'refills/new',
         component: RefillAddComponent
       },
       // Home Page
       {
         path: '',
-        redirectTo: '/refillList',
+        redirectTo: '/refills',
         pathMatch: 'full'
       },
       // 404 Page
@@ -41,7 +43,9 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
     AppComponent,
     RefillAddComponent,
     RefillListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   bootstrap: [
     AppComponent

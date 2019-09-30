@@ -1,7 +1,0 @@
-<a routerLink="/refillAdd" class="addBtn">Add</a>
-<ul>
-  <li *ngFor="let refill of refills | async">
-    {{refill.content}}
-    <button (click)="removeRefill(refill._id)" class="deleteBtn">Delete</button>
-  </li>
-</ul>

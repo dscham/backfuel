@@ -10,8 +10,8 @@ import {Refill} from '../../../../imports/models/refill';
 
 @Component({
   selector: 'refill-list',
-  templateUrl: 'refill-list.html',
-  styleUrls: ['refill-list.scss']
+  templateUrl: 'refill-list.component.html',
+  styleUrls: ['refill-list.component.scss']
 })
 export class RefillListComponent implements OnInit, OnDestroy {
   refills: Observable<Refill[]>;

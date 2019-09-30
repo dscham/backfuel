@@ -1,0 +1,15 @@
+<refill-add></refill-add>
+<table>
+  <tr>
+    <th>Liter</th>
+    <th>Preis</th>
+    <th>Kilometer</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let refill of refills | async">
+    <td>{{ refill.amount }}l</td>
+    <td>{{ refill.price }} &euro;</td>
+    <td>{{ refill.kilometers }}km</td>
+    <td><button (click)="removeRefill(refill._id)" class="deleteBtn">Löschen</button></td>
+  </tr>
+</table>

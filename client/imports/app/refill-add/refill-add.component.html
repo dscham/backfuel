@@ -1,0 +1,10 @@
+<fieldset>
+  <legend>Neuer Tankstopp</legend>
+  <input type="number" step="0.01" id="amount" placeholder="Liter" [(ngModel)]="refill.amount">
+  &nbsp;
+  <input type="number" step="0.01" id="price" placeholder="Preis" [(ngModel)]="refill.price">
+  &nbsp;
+  <input type="number" step="0.01" id="kilometers" placeholder="Kilometer" [(ngModel)]="refill.kilometers">
+  &nbsp;
+  <button (click)="addRefill()">Add</button>
+</fieldset>

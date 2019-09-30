@@ -1,4 +1,6 @@
 export interface Refill {
   _id?: string;
-  content?: string;
+  amount: number;
+  price: number;
+  kilometers?: number;
 }

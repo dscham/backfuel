@@ -1,15 +1,27 @@
 import {Component} from '@angular/core';
 
 import {Meteor} from 'meteor/meteor';
+import {Refill} from "../../../../imports/models/refill";
 
 @Component({
   selector: 'refill-add',
-  templateUrl: 'refill-add.html'
+  templateUrl: 'refill-add.component.html',
+  styleUrls: ['refill-add.component.scss']
 })
 export class RefillAddComponent {
-  content: string;
+  private refill: Refill = {
+    amount: null,
+    price: null,
+    kilometers: null
+  };
+
   addRefill() {
-    Meteor.call('addRefill', this.content);
-    this.content = null;
+    console.log(this.refill);
+    Meteor.call('addRefill', this.refill);
+    this.refill = {
+      amount: null,
+      price: null,
+      kilometers: null
+    };
   }
 }

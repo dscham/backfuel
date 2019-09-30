@@ -1,12 +1,11 @@
 import {Meteor} from 'meteor/meteor';
 
 import {Refills} from '../../../imports/collections/refills';
+import {Refill} from "../../../imports/models/refill";
 
 Meteor.methods({
-  addRefill(content: string) {
-    Refills.insert({
-      content
-    });
+  addRefill(refill: Refill) {
+    Refills.insert(refill);
   },
   removeRefill(_id: string) {
     Refills.remove({
